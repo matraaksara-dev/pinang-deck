@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknologi & Proses - Pulp Serat Sabut Pinang</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 0.5rem;
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all var(--transition-speed);
+        }
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--color-border);
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            margin-left: -1px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 100%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 14px;
+            background-color: var(--color-primary);
+            border: 2px solid white;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-content {
+            padding: 1rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--color-border);
+            position: relative;
+            border-radius: 8px;
+        }
+        .timeline-content h4 {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-content p {
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+        .timeline-io {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: var(--color-secondary-light);
+            color: var(--color-secondary);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        /* Mass balance styling */
+        .mb-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .mb-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .mb-row .input {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+        .mb-row .output {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo-icon">P</div>
+            <div class="logo-text">
+                PINANG PULP
+                <span>PATEN GRANTED 2023</span>
+            </div>
+        </div>
+        
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html"><span>🏠</span> Sampul</a></li>
+            <li class="nav-item"><a href="inovasi.html"><span>💡</span> Latar Belakang & Solusi</a></li>
+            <li class="nav-item active"><a href="teknologi.html"><span>⚙️</span> Teknologi & Proses</a></li>
+            <li class="nav-item"><a href="manfaat.html"><span>🌱</span> Manfaat & Dampak</a></li>
+            <li class="nav-item"><a href="pasar.html"><span>📈</span> Potensi Pasar</a></li>
+            <li class="nav-item"><a href="komersialisasi.html"><span>🤝</span> Komersialisasi</a></li>
+        </ul>
+
+        <div class="nav-footer">
+            <strong>DJKI Forum Bisnis Paten 2026</strong><br>
+            Universitas Brawijaya
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-header">
+            <span class="badge">⚙️ Teknologi & Proses</span>
+            <h1>Teknologi & Optimasi Mutu Pulp</h1>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('opt')">Parameter & Formulasi</button>
+            <button class="tab-btn" onclick="switchTab('flow')">11 Tahap Flowchart</button>
+            <button class="tab-btn" onclick="switchTab('mass')">Neraca Massa (Mass Balance)</button>
+        </div>
+
+        <!-- TAB 1: Parameter & Formulasi -->
+        <div id="opt" class="tab-content active">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Pemasakan Pulp Optimal (Optimized RSM)</h3>
+                    <p>Proses delignifikasi menggunakan <em>Response Surface Methodology</em> (RSM) untuk efisiensi maksimum:</p>
+                    <table style="width:100%; font-size:0.85rem; margin-bottom:1rem;">
+                        <tr><td><strong>Bahan Pemasak</strong></td><td>Larutan NaOH 25%</td></tr>
+                        <tr><td><strong>Suhu Pemasakan</strong></td><td>100°C</td></tr>
+                        <tr><td><strong>Durasi Pemasakan</strong></td><td>90 Menit</td></tr>
+                        <tr><td><strong>Rasio Bahan/Cairan</strong></td><td>1:20 (15 g bahan : 800 ml total cairan)</td></tr>
+                    </table>
+                    <div style="background-color: var(--color-primary-light); color: var(--color-primary); padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500;">
+                        Karakteristik Mutu: Selulosa <strong>46,6% - 53,6%</strong> (kekuatan tarik serat tinggi) | Lignin <strong>6,45% - 7,62%</strong> (rendah, hemat bahan kimia).
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Uji Formulasi Hilir Kertas Seni</h3>
+                    <p>Perbandingan formulasi terbaik menggunakan bahan pengisi (filler) PVAc:</p>
+                    <div class="table-container">
+                        <table style="font-size: 0.8rem;">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>50% Pinang + 50% Kardus (Rekomendasi)</th>
+                                    <th>50% Pinang + 50% Koran</th>
+                                    <th>Tanpa Lem (Murni)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="highlight-row">
+                                    <td><strong>Kuat Tarik (kgf/cm²)</strong></td>
+                                    <td>0,1156</td>
+                                    <td>0,0375</td>
+                                    <td>0,0125</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kuat Tekan (kgf/cm²)</strong></td>
+                                    <td>2,8289</td>
+                                    <td>15,5587</td>
+                                    <td>7,0721</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ketebalan (mm)</strong></td>
+                                    <td>0,10</td>
+                                    <td>0,17</td>
+                                    <td>0,21</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gramatur (g/m²)</strong></td>
+                                    <td>153</td>
+                                    <td>240</td>
+                                    <td>206</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size:0.8rem; margin-bottom:0;">
+                        💡 <strong>Mengapa Kardus?</strong> Serat sekunder kardus bekas memperkuat rajutan serat panjang pinang sehingga menghasilkan kuat tarik terbaik dan ketebalan tipis yang ideal.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: 11 Tahap Flowchart -->
+        <div id="flow" class="tab-content">
+            <div class="timeline">
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>1. Penyediaan Bahan</h4>
+                        <p>Mengumpulkan buah pinang sirih muda berusia 3-4 bulan.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>2. Pembelahan</h4>
+                        <p>Membelah buah pinang secara vertikal menjadi dua bagian untuk memisahkan serat sabut dari biji.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>3. Pengecilan Ukuran</h4>
+                        <p>Memotong serat sabut secara vertikal menjadi potongan kecil (chips) sepanjang 2-3 cm.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>4. Pengupasan Kulit</h4>
+                        <p>Memisahkan serat sabut dari kulit terluar buah dan kotoran fisik.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>5. Pengeringan Awal</h4>
+                        <p>Mengeringkan serat sabut dengan cara diangin-anginkan selama 24 jam.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>6. Penimbangan</h4>
+                        <p>Menimbang serat sabut kering (sebanyak 15 gram untuk skala lab).</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>7. Delignifikasi (Pemasakan)</h4>
+                        <p>Memasak serat menggunakan air (500 ml) dan larutan NaOH 25% selama 90 menit pada suhu 100°C.</p>
+                        <div class="timeline-io">Proses Inti Paten</div>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>8. Penghalusan</h4>
+                        <p>Blender serat hasil delignifikasi selama 5 menit dengan penambahan H₂O 200 ml menjadi bentuk bubur serat (pulp).</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>9. Pencucian</h4>
+                        <p>Mencuci pulp untuk membersihkan sisa bahan kimia menggunakan 300 ml air bersih dan kain saring.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>10. Pengeringan Pulp</h4>
+                        <p>Mengeringkan pulp basah di dalam oven pada suhu 70°C selama 12 jam hingga diperoleh pulp kering.</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-content">
+                        <h4>11. Analisis Kualitas</h4>
+                        <p>Menguji kadar selulosa dan lignin pulp kering hasil verifikasi lab.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: Neraca Massa -->
+        <div id="mass" class="tab-content">
+            <div class="card">
+                <h3>Visualisasi Neraca Massa (Mass Balance)</h3>
+                <p>Distribusi bahan dari buah pinang utuh hingga menjadi pulp kering siap cetak (Skala Lab):</p>
+                
+                <div class="mb-flow">
+                    <div class="mb-row">
+                        <span><strong>Buah Pinang Utuh</strong></span>
+                        <span class="input">1226,1 g</span>
+                        <span>➔</span>
+                        <span>Pembersihan</span>
+                        <span>➔</span>
+                        <span class="output">Buah Bersih: 1102,26 g</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">(Kotoran Hilang: 123,84 g)</span>
+                    </div>
+                    <div class="mb-row">
+                        <span><strong>Buah Bersih</strong></span>
+                        <span class="input">1102,26 g</span>
+                        <span>➔</span>
+                        <span>Pemisahan Biji</span>
+                        <span>➔</span>
+                        <span class="output">Buah Tanpa Biji: 660,46 g</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">(Biji Terpisah: 441,8 g)</span>
+                    </div>
+                    <div class="mb-row">
+                        <span><strong>Buah Tanpa Biji</strong></span>
+                        <span class="input">660,46 g</span>
+                        <span>➔</span>
+                        <span>Pengecilan & Pengupasan</span>
+                        <span>➔</span>
+                        <span class="output">Serat Sabut Basah: 517,46 g</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">(Kulit Terluar Hilang: 143 g)</span>
+                    </div>
+                    <div class="mb-row">
+                        <span><strong>Serat Sabut Basah</strong></span>
+                        <span class="input">517,46 g</span>
+                        <span>➔</span>
+                        <span>Dianginkan 24 Jam</span>
+                        <span>➔</span>
+                        <span class="output">Serat Sabut Kering: 221 g</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">(Uap Air Hilang: 296,46 g)</span>
+                    </div>
+                    <div class="mb-row" style="background-color: var(--color-primary-light);">
+                        <span><strong>Sampel Pemasakan</strong></span>
+                        <span class="input">15 g</span>
+                        <span>➔</span>
+                        <span>Delignifikasi (NaOH 25%)</span>
+                        <span>➔</span>
+                        <span class="output">Pulp Kering Akhir: 7 g</span>
+                        <span style="font-size:0.8rem; color:var(--text-muted);">(Rendemen Pulp: 46,67%)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="presentation-controls">
+            <a href="inovasi.html" class="btn btn-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Kembali
+            </a>
+            <a href="manfaat.html" class="btn btn-primary">
+                Selanjutnya
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Deactivate all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Show active tab & button
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
