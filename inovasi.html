@@ -8,7 +8,41 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="logo-container">
+            <div class="logo-icon">P</div>
+            <div class="logo-text">
+                PINANG PULP
+                <span>PATEN 2023</span>
+            </div>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-drawer" id="navDrawer">
+        <div class="drawer-header">
+            <div class="logo-container">
+                <div class="logo-icon">P</div>
+                <div class="logo-text">
+                    PINANG PULP
+                    <span>PATEN 2023</span>
+                </div>
+            </div>
+            <button class="close-drawer-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html"><span>🏠</span> Sampul</a></li>
+            <li class="nav-item active"><a href="inovasi.html"><span>💡</span> Latar Belakang & Solusi</a></li>
+            <li class="nav-item"><a href="teknologi.html"><span>⚙️</span> Teknologi & Proses</a></li>
+            <li class="nav-item"><a href="manfaat.html"><span>🌱</span> Manfaat & Dampak</a></li>
+            <li class="nav-item"><a href="pasar.html"><span>📈</span> Potensi Pasar</a></li>
+            <li class="nav-item"><a href="komersialisasi.html"><span>🤝</span> Komersialisasi</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Navigation (Desktop) -->
     <aside class="sidebar">
         <div class="logo-container">
             <div class="logo-icon">P</div>
@@ -40,24 +74,33 @@
             <h1>Mengapa Serat Sabut Pinang?</h1>
         </div>
 
+        <!-- Smart Image Placeholder for Raw Material -->
+        <div class="placeholder-container" style="min-height: 200px; margin-bottom: 2rem;">
+            <div class="placeholder-explanation">
+                <strong>🥥 Visual Bahan Baku Sabut Pinang</strong>
+                <p style="font-size: 0.85rem; margin-bottom: 0;">Silakan ganti berkas <code>assets/raw-material.png</code> dengan foto buah pinang sirih muda (usia 3-4 bulan) atau sabut pinang kering.<br>Rekomendasi dimensi: 800x300 piksel.</p>
+            </div>
+            <img src="assets/raw-material.png" class="placeholder-img" alt="Bahan Baku Pinang">
+        </div>
+
         <div class="grid grid-2">
             <!-- Left Side: Problem Card -->
             <div class="card" style="border-top: 4px solid #ef4444;">
                 <div class="card-icon" style="background-color: #fee2e2; color: #ef4444;">⚠️</div>
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Tantangan Industri & Lingkungan</h2>
+                <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Tantangan Industri & Lingkungan</h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: #ef4444; font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Deforestasi Hutan:</strong> Industri kertas konvensional sangat bergantung pada pohon kayu hutan, memicu penggundulan hutan.</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Deforestasi Hutan:</strong> Industri kertas konvensional sangat bergantung pada serat kayu hutan, memicu deforestasi lingkungan.</p>
                     </div>
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: #ef4444; font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Ketergantungan Impor:</strong> Indonesia mengimpor hingga 3 juta ton kertas seni per tahun akibat kapasitas industri lokal yang belum memadai.</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Ketergantungan Impor:</strong> Indonesia mengimpor hingga 3 juta ton kertas seni per tahun akibat kapasitas industri lokal yang belum memadai.</p>
                     </div>
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: #ef4444; font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Limbah Tidak Termanfaatkan:</strong> Sabut buah pinang sirih melimpah di sentra perkebunan namun umumnya hanya ditumpuk dan dibakar.</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Limbah Tidak Termanfaatkan:</strong> Sabut buah pinang sirih melimpah di sentra perkebunan namun umumnya hanya ditumpuk dan dibakar.</p>
                     </div>
                 </div>
             </div>
@@ -65,20 +108,20 @@
             <!-- Right Side: Solution Card -->
             <div class="card" style="border-top: 4px solid var(--color-primary);">
                 <div class="card-icon">✅</div>
-                <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Solusi Inovasi Kami</h2>
+                <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Solusi Inovasi Kami</h2>
                 
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: var(--color-primary); font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Substitusi Bahan Non-Kayu:</strong> Mengembangkan pulp berkualitas tinggi dari serat sabut pinang muda (3-4 bulan).</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Substitusi Bahan Non-Kayu:</strong> Mengembangkan pulp berkualitas tinggi dari serat sabut pinang muda (3-4 bulan).</p>
                     </div>
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: var(--color-primary); font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Proses Tanpa Klorin:</strong> Kertas seni tidak menuntut tingkat kecerahan yang ekstrem, sehingga meniadakan pemutihan klorin yang merusak lingkungan.</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Proses Tanpa Klorin:</strong> Kertas seni tidak menuntut tingkat kecerahan yang ekstrem, sehingga meniadakan pemutihan klorin yang merusak lingkungan.</p>
                     </div>
                     <div style="display: flex; gap: 0.75rem;">
                         <span style="color: var(--color-primary); font-weight: bold;">•</span>
-                        <p style="margin-bottom: 0;"><strong>Circular Economy:</strong> Mengubah limbah padat perkebunan menjadi produk bernilai jual tinggi (pulp & kertas seni premium).</p>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Circular Economy:</strong> Mengubah limbah padat perkebunan menjadi produk bernilai jual tinggi (pulp & kertas seni premium).</p>
                     </div>
                 </div>
             </div>
@@ -96,5 +139,29 @@
         </div>
     </main>
 
+    <script>
+        function toggleMenu() {
+            const drawer = document.getElementById('navDrawer');
+            drawer.classList.toggle('active');
+        }
+
+        // Smart image placeholder detection
+        document.querySelectorAll('.placeholder-img').forEach(img => {
+            function checkPlaceholder() {
+                const explanation = img.parentElement.querySelector('.placeholder-explanation');
+                if (img.naturalWidth > 10) {
+                    if (explanation) explanation.style.display = 'none';
+                    img.style.opacity = '1';
+                } else {
+                    if (explanation) explanation.style.display = 'flex';
+                    img.style.opacity = '0.1';
+                }
+            }
+            img.addEventListener('load', checkPlaceholder);
+            if (img.complete) {
+                checkPlaceholder();
+            }
+        });
+    </script>
 </body>
 </html>

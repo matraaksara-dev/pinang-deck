@@ -8,7 +8,41 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="logo-container">
+            <div class="logo-icon">P</div>
+            <div class="logo-text">
+                PINANG PULP
+                <span>PATEN 2023</span>
+            </div>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-drawer" id="navDrawer">
+        <div class="drawer-header">
+            <div class="logo-container">
+                <div class="logo-icon">P</div>
+                <div class="logo-text">
+                    PINANG PULP
+                    <span>PATEN 2023</span>
+                </div>
+            </div>
+            <button class="close-drawer-btn" onclick="toggleMenu()">✕</button>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html"><span>🏠</span> Sampul</a></li>
+            <li class="nav-item"><a href="inovasi.html"><span>💡</span> Latar Belakang & Solusi</a></li>
+            <li class="nav-item"><a href="teknologi.html"><span>⚙️</span> Teknologi & Proses</a></li>
+            <li class="nav-item"><a href="manfaat.html"><span>🌱</span> Manfaat & Dampak</a></li>
+            <li class="nav-item"><a href="pasar.html"><span>📈</span> Potensi Pasar</a></li>
+            <li class="nav-item active"><a href="komersialisasi.html"><span>🤝</span> Komersialisasi</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Navigation (Desktop) -->
     <aside class="sidebar">
         <div class="logo-container">
             <div class="logo-icon">P</div>
@@ -45,30 +79,32 @@
             <div class="card">
                 <h3 style="color: var(--color-primary); margin-bottom: 1.25rem;">💼 Model Bisnis & Strategi Hilirisasi</h3>
                 
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                     <div style="border-left: 3px solid var(--color-primary); padding-left: 1rem;">
                         <h4 style="font-weight:600; font-size:0.95rem; margin-bottom:0.25rem;">1. Lisensi Paten Industri</h4>
-                        <p style="font-size:0.85rem; margin-bottom:0;">Melisensikan teknologi proses pembuatan pulp (delignifikasi NaOH 25% teroptimasi) ke produsen kertas skala menengah-besar untuk mengadopsi bahan baku non-kayu.</p>
+                        <p style="font-size:0.85rem; margin-bottom:0; line-height: 1.5;">Melisensikan teknologi proses pembuatan pulp (delignifikasi NaOH 25% teroptimasi) ke produsen kertas skala menengah-besar untuk adopsi bahan baku non-kayu.</p>
                     </div>
 
                     <div style="border-left: 3px solid var(--color-primary); padding-left: 1rem;">
                         <h4 style="font-weight:600; font-size:0.95rem; margin-bottom:0.25rem;">2. Kemitraan Bahan Baku B2B</h4>
-                        <p style="font-size:0.85rem; margin-bottom:0;">Menyuplai lembaran pulp serat pinang setengah jadi atau cetakan kertas seni polos kepada UMKM/pengrajin kreatif untuk diolah menjadi barang jadi bernilai tinggi.</p>
+                        <p style="font-size:0.85rem; margin-bottom:0; line-height: 1.5;">Menyuplai lembaran pulp serat pinang setengah jadi atau kertas seni polos kepada pengrajin kreatif untuk diolah menjadi barang jadi bernilai tinggi.</p>
                     </div>
                 </div>
             </div>
 
             <!-- The Ask / Kemitraan yang Dicari -->
-            <div class="card" style="border-top: 4px solid var(--color-secondary);">
-                <h3 style="color: var(--color-secondary); margin-bottom: 1.25rem;">🚀 Kebutuhan Kemitraan (The Ask)</h3>
-                <p style="font-size: 0.9rem; line-height: 1.6;">
-                    Guna melangkah dari skala laboratorium (15 gram/batch) menuju uji coba industri skala pilot (pabrik percontohan), kami mengundang:
-                </p>
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
-                    <div>• <strong>Mitra Pendanaan:</strong> Pendanaan untuk pengembangan fasilitas produksi percontohan.</div>
-                    <div>• <strong>Mitra Industri Kertas:</strong> Perusahaan pulp & kertas yang berminat melakukan uji manufaktur bersama (*Joint Manufacturing*).</div>
+            <div class="card" style="border-top: 4px solid var(--color-secondary); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 style="color: var(--color-secondary); margin-bottom: 1.25rem;">🚀 Kebutuhan Kemitraan (The Ask)</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+                        Guna melangkah dari skala laboratorium (15 gram/batch) menuju uji coba industri skala pilot (pabrik percontohan), kami mengundang:
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                        <div>• <strong>Mitra Pendanaan:</strong> Pendanaan untuk pengembangan fasilitas produksi percontohan.</div>
+                        <div>• <strong>Mitra Industri Kertas:</strong> Perusahaan pulp & kertas yang berminat melakukan uji manufaktur bersama (*Joint Manufacturing*).</div>
+                    </div>
                 </div>
-                <div style="background-color: var(--color-secondary-light); color: var(--color-secondary); padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-align: center;">
+                <div style="background-color: var(--color-secondary-light); color: var(--color-secondary); padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-align: center; margin-top: 1rem;">
                     Mari Wujudkan Masa Depan Hijau Bersama Pinang Pulp!
                 </div>
             </div>
@@ -76,15 +112,15 @@
 
         <!-- Contact Box -->
         <div class="card" style="margin-bottom: 2.5rem; background-color: #fafafa; border-style: dashed;">
-            <h3 style="margin-bottom: 0.75rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-main);">Hubungi Kami</h3>
+            <h3 style="margin-bottom: 0.75rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-main);">Hubungi Kami</h3>
             <div class="grid grid-2" style="gap: 1rem; margin-bottom: 0;">
                 <div>
                     <p style="margin-bottom:0.25rem; font-size:0.85rem;"><strong>Direktorat Inovasi dan Inkubator Bisnis</strong></p>
-                    <p style="margin-bottom:0; font-size:0.85rem;">Universitas Brawijaya, Malang, Jawa Timur</p>
+                    <p style="margin-bottom:0; font-size:0.85rem; color: var(--text-muted);">Universitas Brawijaya, Malang, Jawa Timur</p>
                 </div>
                 <div>
                     <p style="margin-bottom:0.25rem; font-size:0.85rem;"><strong>Koordinator Inventor</strong></p>
-                    <p style="margin-bottom:0; font-size:0.85rem;">Ika Atsari Dewi, STP, MP (Email: ika.dewi@ub.ac.id)</p>
+                    <p style="margin-bottom:0; font-size:0.85rem; color: var(--text-muted);">Ika Atsari Dewi, STP, MP (Email: ika.dewi@ub.ac.id)</p>
                 </div>
             </div>
         </div>
@@ -101,5 +137,11 @@
         </div>
     </main>
 
+    <script>
+        function toggleMenu() {
+            const drawer = document.getElementById('navDrawer');
+            drawer.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
